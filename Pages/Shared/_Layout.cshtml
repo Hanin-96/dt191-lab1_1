@@ -29,27 +29,31 @@
             </ul>
         </nav>
     </header>
-    <div class="date-msg">
-        @{
-            DateTime today = DateTime.Now;
-            string dateToday = today.ToString("yyyy-MM-dd");
-        }
-        <p>Dagens datum är: @dateToday</p>
-    </div>
 
     <main role="main">
+        <div class="date-msg-wrap">
+            <div class="date-msg">
+                @{
+                    DateTime today = DateTime.Now;
+                    string dateToday = today.ToString("yyyy-MM-dd");
+                }
+                <p>Dagens datum är: @dateToday</p>
+            </div>
+        </div>"
         <div class="main-container">
             @RenderBody()
         </div>
     </main>
 
-    <div class="footer-wrap">
-        <footer>
+
+    <footer>
+        <div class="footer-wrap">
             <p>
                 Hanin Farhan - Kontakta mig via e-post: <a href="mailto:hafa2300@student.miun.se">hafa2300@student.miun.se</a>
             </p>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
 
     <script src="~/js/site.js" asp-append-version="true"></script>
 
