@@ -40,6 +40,7 @@ header {
     grid-area: header;
     background-color: #D0CDEC;
     height: 100%;
+    min-height: 100vh;
     width: 100%;
     box-shadow: 5px 0px 15px -5px rgba(0,0,0,0.5);
 }
@@ -75,6 +76,7 @@ nav {
             width: 100%;
             background-color: #352063;
             border-radius: 0.5rem;
+            transition: all 0.2s ease-in-out;
         }
 
             nav ul li a {
@@ -89,6 +91,11 @@ nav {
                 background-color: #1e1e1e;
             }
 
+.active {
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+}
+
 /*------------------main---------------------*/
 
 main {
@@ -97,6 +104,7 @@ main {
     max-width: 80rem;
     width: 100%;
     margin-bottom: 10rem;
+    padding: 2rem;
 }
 
 .main-container {
@@ -121,7 +129,7 @@ footer {
     height: 100%;
     max-height: fit-content;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 2rem;
     padding: 1rem;
     text-align: center;
     margin-bottom: 2rem;

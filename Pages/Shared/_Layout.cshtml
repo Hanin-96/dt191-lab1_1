@@ -17,14 +17,14 @@
         <div class="logo-wrap"> <a asp-area="" asp-page="/Index"><img src="~/logo.svg" alt="logotyp" /></a></div>
         <nav>
             <ul>
-                <li class="nav-item">
-                    <a asp-area="" asp-page="/Index">Hem</a>
+                <li>
+                    <a asp-area="" asp-page="/Index" class="nav-item">Hem</a>
                 </li>
-                <li class="nav-item">
-                    <a asp-area="" asp-page="/RazorPage">Razor</a>
+                <li>
+                    <a asp-area="" asp-page="/RazorPage" class="nav-item">Razor</a>
                 </li>
-                <li class="nav-item">
-                    <a asp-area="" asp-page="/About">Om</a>
+                <li>
+                    <a asp-area="" asp-page="/About" class="nav-item">Om</a>
                 </li>
             </ul>
         </nav>
@@ -43,11 +43,13 @@
         </div>
     </main>
 
-    <footer>
-        <p>
-            Hanin Farhan - Kontakta mig via e-post: <a href="mailto:hafa2300@student.miun.se">hafa2300@student.miun.se</a>
-        </p>
-    </footer>
+    <div class="footer-wrap">
+        <footer>
+            <p>
+                Hanin Farhan - Kontakta mig via e-post: <a href="mailto:hafa2300@student.miun.se">hafa2300@student.miun.se</a>
+            </p>
+        </footer>
+    </div>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
 
