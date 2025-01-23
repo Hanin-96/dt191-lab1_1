@@ -104,11 +104,14 @@ main {
     padding: 1rem;
     border: 2rem solid #D0CDEC;
     border-radius: 1.5rem;
+    margin-bottom: 4rem;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
 
 article {
     max-width: 55ch;
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 footer {
@@ -135,3 +138,16 @@ footer {
     background-color: #D0CDEC;
     border-radius: 0.5rem;
 }
+
+.date-hours {
+    margin-left: 2rem;
+}
+
+.course-list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+    .course-list li {
+        margin-bottom: 0.5rem;
+    }

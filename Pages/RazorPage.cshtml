@@ -6,9 +6,71 @@
 }
 
 <!--Webbplatsen ska ha stöd för statiska filer från wwwrot från vilken CSS- och JavaScript-filer ska laddas in.
-Webbplatsen ska utsmyckas grafiskt med hjälp av CSS, 
+Webbplatsen ska utsmyckas grafiskt med hjälp av CSS,
 och det ska finnas någon form av valfri JavaScript-funktionalitet som ska ligga i en extern JavaScript-fil.
 Källkoden ska vara prydligt formaterad och validera korrekt.-->
-<h1>Razor sidan</h1>
+<div>
+    <h1>Razor</h1>
+    <article>
+        <h2>Information</h2>
+        <p>
+            På sidan för Razor ska följande saker implementeras med Razor-syntax:
+            En lista (list) med de kurser du läst i programmet i sträng-format (ex: "dt057g, Webbutveckling I").
+            Denna lista ska sedan skrivas ut till skärmen med lämplig loop, i form av en "unordered list".
+        </p>
+    </article>
+
+    <article>
+        @{
+            DateTime today = DateTime.Now;
+            string dateToday = today.ToString("yyyy-MM-dd");
+            string dateHours = today.ToString("HH:mm:ss");
+            string dayOfWeek = today.ToString("dddd");
+        }
+        <h3>Datum/klockslag</h3>
+
+        <p>@dateToday <span class="date-hours">@dateHours</span></p>
+        <br />
+
+        @if (dayOfWeek == "Friday")
+        {
+            <p>Idag är det fredag!</p>
+        }
+        else
+        {
+            <p>Idag är det inte fredag!</p>
+        }
+
+    </article>
+
+    <article>
+        <h3>Kurser jag har läst:</h3>
+        @{
+            List<String> courseList = new List<String>(){
+        "DT057G, Webbutveckling I",
+        "DT084G, Introduktion till programmering i JavaScript",
+        "DT200G, Grafisk teknik för webb",
+        "DT068G, Webbanvändbarhet",
+        "DT003G, Databaser",
+        "DT211G, Frontend-baserad webbutveckling",
+        "DT207G, Backend-baserad webbutveckling",
+        "DT208G, Programmering i TypeScript",
+        "IK060G, Projektledning",
+        "DT071G, Programmering i C# .net",
+        "DT193G, Fullstacks-utveckling med ramverk",
+        "DT209G, Webbutveckling med Wordpress"
+        };
+
+        }
+        <ul class="course-list">
+            @foreach (var course in courseList)
+            {
+                <li>@course</li>
+            }
+        </ul>
+    </article>
+
+
+</div>
 @{
 }
