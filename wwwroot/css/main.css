@@ -146,6 +146,7 @@ footer {
     display: flex;
     justify-content: end;
 }
+
 .date-msg {
     position: relative;
     top: 0;
@@ -171,3 +172,27 @@ footer {
     .course-list li {
         margin-bottom: 0.5rem;
     }
+
+@media all and (max-width:850px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    main {
+        margin-bottom: 4rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    footer {
+        margin: 0;
+    }
+}
