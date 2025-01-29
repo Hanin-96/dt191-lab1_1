@@ -14,33 +14,35 @@
 </head>
 <body>
     <header>
-        <div class="logo-wrap"> <a asp-area="" asp-page="/Index"><img src="~/logo.svg" alt="logotyp" /></a></div>
-        <nav>
-            <ul>
-                <li>
-                    <a asp-area="" asp-page="/Index" class="nav-item">Startsida</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-page="/RazorPage" class="nav-item">Razor</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-page="/About" class="nav-item">Om</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main role="main">
-        <div class="date-msg-wrap">
-            <div class="date-msg">
-                @{
-                    //Skriver ut datum på alla undersidor
-                    DateTime today = DateTime.Now;
-                    string dateToday = today.ToString("yyyy-MM-dd");
-                }
-                <p>Dagens datum är: @dateToday</p>
+        <div class="header-wrap">
+            <div class="logo-wrap"> <a asp-area="" asp-page="/Index"><img src="~/logo.svg" alt="logotyp" /></a></div>
+            <div class="date-msg-wrap">
+                <div class="date-msg">
+                    @{
+                        //Skriver ut datum på alla undersidor
+                        DateTime today = DateTime.Now;
+                        string dateToday = today.ToString("yyyy-MM-dd");
+                    }
+                    <p>Dagens datum är: @dateToday</p>
+                </div>
             </div>
         </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a asp-area="" asp-page="/Index" class="nav-item">Startsida</a>
+            </li>
+            <li>
+                <a asp-area="" asp-page="/RazorPage" class="nav-item">Razor</a>
+            </li>
+            <li>
+                <a asp-area="" asp-page="/About" class="nav-item">Om</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main role="main">
         <div class="main-container">
             @RenderBody()
         </div>
