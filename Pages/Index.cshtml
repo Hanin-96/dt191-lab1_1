@@ -1,7 +1,8 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    //Titel på webbsidan
+    ViewData["Title"] = "Satrtsida";
 }
 <!--Valfri information på startsidan-->
 <div>
@@ -9,23 +10,24 @@
     <article>
         <h2>Om uppgiften</h2>
         <p>
-            På sidan för Razor ska följande saker implementeras med Razor-syntax:
-            En lista (list) med de kurser du läst i programmet i sträng-format (ex: "dt057g, Webbutveckling I"). 
-            Denna lista ska sedan skrivas ut till skärmen med lämplig loop, i form av en "unordered list".
+            Syftet med uppgiften är att skapa en enkel webbapplikation med ASP.net Core.
         </p>
 
         <br />
         <p>
-            På sidan för Razor ska följande saker implementeras med Razor-syntax:
-            En lista (list) med de kurser du läst i programmet i sträng-format (ex: "dt057g, Webbutveckling I").
-            Denna lista ska sedan skrivas ut till skärmen med lämplig loop, i form av en "unordered list".
+            Applikationen består av tre undersidor: Startsida, Razor och Om sidan. 
+            Webbplatsen har även stöd för statiska filer såsom CSS styling och JavaScript fil. 
+            Jag har valt att inkludera JavaScript kod som lägger till klassen active för att färglägga den aktiva undersidan i navbaren.
+            Alla tre sidor har gemensamt en "shared" layout fil där header och footer är samma på alla sidor.
         </p>
 
         <br />
+
         <p>
-            På sidan för Razor ska följande saker implementeras med Razor-syntax:
-            En lista (list) med de kurser du läst i programmet i sträng-format (ex: "dt057g, Webbutveckling I").
-            Denna lista ska sedan skrivas ut till skärmen med lämplig loop, i form av en "unordered list".
+            På sidan för Razor har följande implementeras med Razor-syntax:
+            En lista (list) med de kurser jag har läst i programmet.
+            Listan över kurser skrivs ut till skärmen med lämplig loop, i form av en "unordered list".
+            Datum och klockslag ska även skrivas ut och en kontroll som visar om det är fredag idag.
         </p>
     </article>
 </div>

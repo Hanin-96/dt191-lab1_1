@@ -2,26 +2,22 @@
 @model lab1_1.Pages.RazorPageModel
 
 @{
+    //Titel på webbsidan
     ViewData["Title"] = "Razor";
 }
 
-<!--Webbplatsen ska ha stöd för statiska filer från wwwrot från vilken CSS- och JavaScript-filer ska laddas in.
-Webbplatsen ska utsmyckas grafiskt med hjälp av CSS,
-och det ska finnas någon form av valfri JavaScript-funktionalitet som ska ligga i en extern JavaScript-fil.
-Källkoden ska vara prydligt formaterad och validera korrekt.-->
 <div>
     <h1>Razor</h1>
     <article>
         <h2>Information</h2>
         <p>
-            På sidan för Razor ska följande saker implementeras med Razor-syntax:
-            En lista (list) med de kurser du läst i programmet i sträng-format (ex: "dt057g, Webbutveckling I").
-            Denna lista ska sedan skrivas ut till skärmen med lämplig loop, i form av en "unordered list".
+            Datum/klockslag samt lästa kurser är utskrivna på sidan.
         </p>
     </article>
 
     <article>
         @{
+            //Skapar variabler av typen DateTime och hämtar datum & tid
             DateTime today = DateTime.Now;
             string dateToday = today.ToString("yyyy-MM-dd");
             string dateHours = today.ToString("HH:mm:ss");
@@ -29,9 +25,11 @@ Källkoden ska vara prydligt formaterad och validera korrekt.-->
         }
         <h3>Datum/klockslag</h3>
 
+        <!--Skriver ut datum och klockslag-->
         <p>@dateToday <span class="date-hours">@dateHours</span></p>
         <br />
 
+        <!--If sats för att checka om det är fredag-->
         @if (dayOfWeek == "Friday")
         {
             <p>Idag är det fredag!</p>
@@ -46,6 +44,7 @@ Källkoden ska vara prydligt formaterad och validera korrekt.-->
     <article>
         <h3>Kurser jag har läst:</h3>
         @{
+            //Skapar lista över alla kurser jag har läst
             List<String> courseList = new List<String>(){
         "DT057G, Webbutveckling I",
         "DT084G, Introduktion till programmering i JavaScript",
@@ -63,6 +62,7 @@ Källkoden ska vara prydligt formaterad och validera korrekt.-->
 
         }
         <ul class="course-list">
+            <!--Loopar genom och skriver ut varje kurs-->
             @foreach (var course in courseList)
             {
                 <li>@course</li>
@@ -72,5 +72,4 @@ Källkoden ska vara prydligt formaterad och validera korrekt.-->
 
 
 </div>
-@{
-}
+

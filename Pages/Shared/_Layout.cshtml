@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li>
-                    <a asp-area="" asp-page="/Index" class="nav-item">Hem</a>
+                    <a asp-area="" asp-page="/Index" class="nav-item">Startsida</a>
                 </li>
                 <li>
                     <a asp-area="" asp-page="/RazorPage" class="nav-item">Razor</a>
@@ -34,12 +34,13 @@
         <div class="date-msg-wrap">
             <div class="date-msg">
                 @{
+                    //Skriver ut datum på alla undersidor
                     DateTime today = DateTime.Now;
                     string dateToday = today.ToString("yyyy-MM-dd");
                 }
                 <p>Dagens datum är: @dateToday</p>
             </div>
-        </div>"
+        </div>
         <div class="main-container">
             @RenderBody()
         </div>
