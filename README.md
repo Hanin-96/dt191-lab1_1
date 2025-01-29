@@ -1,4 +1,4 @@
-# lab1_1 ASP.net Core applikation
+# DT191G - lab1_1 ASP.net Core applikation
 
  Syftet med uppgiften är att skapa en enkel webbapplikation med ASP.net Core.
 
